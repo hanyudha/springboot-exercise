@@ -9,7 +9,7 @@ create table public.employees
     salary              DECIMAL (8, 2) not null ,
     id_job              varchar(36) not null ,
     id_manager          varchar(36) not null ,
-    id_department       varchar(36) not null ,
+    id_departments      varchar(36) not null ,
     primary key (id)
 );
 
@@ -51,7 +51,7 @@ alter table if exists public.employees
 
 alter table if exists public.employees
     add constraint FKtestforeignkeyfromdepartment
-        foreign key (id_department)
+        foreign key (id_departments)
             references public.departments;
 
 alter table if exists public.dependents
