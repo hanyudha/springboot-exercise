@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>HireDate</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="d, index : ${data.content}">
+                <td th:text="${d.first_name}"></td>
+                <td th:text="${d.last_name}"></td>
+                <td th:text="${d.email}"></td>
+                <td th:text="${d.phone_number}"></td>
+                <td th:text="${d.hire_date}"></td>
+                <td th:text="${d.salary}"></td>
+                <td th:text="${d.id_departments?.department_name}"></td>
+                <td>edit | delete</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
